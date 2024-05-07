@@ -17,6 +17,8 @@
 
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
 require('dotenv').config();
+let servers = await client.guilds.cache.size
+let servercount = await client.guilds.cache.reduce((a,b) => a+b.membercount, 0 )
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -36,7 +38,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["PLAYING with {member}"];
+const statusMessages = ["${servercount} members","MUSIC with D Store","Đang dòm ngó ai đó"];
 
 
 let currentIndex = 0;
@@ -74,7 +76,7 @@ function updateStatusAndSendMessages() {
 
   client.user.setPresence({
     activities: [{ name: currentStatus, type: ActivityType.Custom}],
-    status: 'mobile',
+    status: 'dnd',
   });
 
   
