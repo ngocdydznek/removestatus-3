@@ -17,8 +17,8 @@
 
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
 require('dotenv').config();
-let servers = await client.guilds.cache.size
-let servercount = await client.guilds.cache.reduce((a,b) => a+b.membercount, 0 )
+const servers = await client.guilds.cache.size
+const servercount = await client.guilds.cache.reduce((a,b) => a+b.membercount, 0 )
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
