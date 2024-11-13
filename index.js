@@ -21,7 +21,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By RTX`);
 });
 
-const statusMessages = ["🤑Mua hàng đi ạ", "👀Đang dòm ngó ai đó", "📩Mua hàng thì tạo ticket"];
+const statusMessages = ["🤑Mua hàng đi ạ", "👀Đợi sốp 1 xíu", "📩Sẽ có người reply ngay", "🙄Đừng vội mà đổi ý nhó", "💸Khách của em mãi đỉnh mãi đỉnh luôn",];
 
 let currentIndex = 0;
 const channelId = '';
